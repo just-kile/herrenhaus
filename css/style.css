@@ -1,0 +1,24 @@
+body{
+	background: #000000; 
+	/*
+background: #000000; 
+background: -moz-linear-gradient(left,  #000000 0%, #241d42 25%, #000000 50%, #2a2549 75%, #000000 100%); /
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#000000), color-stop(25%,#241d42), color-stop(50%,#000000), color-stop(75%,#2a2549), color-stop(100%,#000000));
+background: -webkit-linear-gradient(left,  #000000 0%,#241d42 25%,#000000 50%,#2a2549 75%,#000000 100%); 
+background: -o-linear-gradient(left,  #000000 0%,#241d42 25%,#000000 50%,#2a2549 75%,#000000 100%);
+background: -ms-linear-gradient(left,  #000000 0%,#241d42 25%,#000000 50%,#2a2549 75%,#000000 100%); 
+background: linear-gradient(to right,  #000000 0%,#241d42 25%,#000000 50%,#2a2549 75%,#000000 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 );
+*/
+}
+
+
+.logo{
+	
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10%;
+}
+.logo,.logo img{
+	width:500px;
+}
