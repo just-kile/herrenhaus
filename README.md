@@ -1,5 +1,6 @@
 herrenhaus
 ==========
+Demo Page: just-kile.github.io/herrenhaus
 Animations:
 * SPACE: heartbeat
 * Q: blur
