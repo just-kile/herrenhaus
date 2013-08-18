@@ -1,5 +1,6 @@
 body{
 	background: #000000; 
+	overflow:hidden;
 	/*
 background: #000000; 
 background: -moz-linear-gradient(left,  #000000 0%, #241d42 25%, #000000 50%, #2a2549 75%, #000000 100%); /
@@ -30,7 +31,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 
 
-@-webkit-keyframes "pulse" {
+@-webkit-keyframes "h_pulse" {
  0% {
    -webkit-transform: scale(1);
   
@@ -46,7 +47,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 
 }
 
-@-webkit-keyframes blurPulse {
+@-webkit-keyframes h_blurPulse {
 	0% {
 		-webkit-filter:blur(0px);
 	}
@@ -58,7 +59,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 	}
 }
 
-@-webkit-keyframes flipLeft {
+@-webkit-keyframes h_flipLeft {
 	0% {
 		/*-webkit-transform: rotateY(0);*/
 	}
@@ -71,7 +72,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		 -webkit-transform:scale(1,1) rotateY(360deg);
 	}
 }
-@-webkit-keyframes explode {
+@-webkit-keyframes h_explode {
 	0% {
 		/*-webkit-transform: rotateY(0);*/
 	}
@@ -80,11 +81,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		 -webkit-transform: scale(15) rotate(10deg);
 		  opacity: 0;
 	}
+	70% {
+		/*-webkit-transform: rotateY(180deg);*/
+		 -webkit-transform: scale(15) rotate(10deg);
+		  opacity: 0;
+	}
 	100% {
 		/*-webkit-transform: rotateY(360deg);*/
 	}
 }
-@-webkit-keyframes flipTop {
+@-webkit-keyframes h_flipTop {
 	0% {
 		/*-webkit-transform: rotateY(0);*/
 	}
@@ -97,7 +103,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		 -webkit-transform:scale(1,1) rotateX(360deg);
 	}
 }
-@-webkit-keyframes flipBottom {
+@-webkit-keyframes h_flipBottom {
 	0% {
 		/*-webkit-transform: rotateY(0);*/
 	}
@@ -110,7 +116,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		 -webkit-transform:scale(1,1) rotateZ(-360deg);
 	}
 }
-@-webkit-keyframes saturate {
+@-webkit-keyframes h_saturate {
 	0% {
 		/*-webkit-transform: rotateY(0);*/
 	}

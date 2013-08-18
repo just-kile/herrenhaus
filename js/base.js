@@ -1,38 +1,58 @@
 var keyAnimMap = {
 		32:{//space
 			duration:"0.5s",
-			className:"pulse",
+			className:"h_pulse",
 			timing:"ease-out"
 		},
 		81:{//q
 			duration:"0.5s",
-			className:"blurPulse",
+			className:"h_blurPulse",
 			timing:"ease-out"
 		},
 		65:{//a
 			duration:"0.5s",
-			className:"flipLeft",
+			className:"h_flipLeft",
 			timing:"linear"
 		},
 		68:{//d
 			duration:"0.5s",
-			className:"explode",
+			className:"h_explode",
 			timing:"linear"
 		},
 		87:{//w
 			duration:"0.5s",
-			className:"flipTop",
+			className:"h_flipTop",
 			timing:"linear"
 		},
 		83:{//s
 			duration:"0.5s",
-			className:"flipBottom",
+			className:"h_flipBottom",
 			timing:"linear"
 		},
 		69:{//e
 			duration:"0.5s",
-			className:"saturate",
+			className:"h_saturate",
 			timing:"linear"
+		},
+		82:{//r
+			duration:"1s",
+			className:"flip",
+			timing:"linear"
+		},
+		70:{//f
+			duration:"0.5s",
+			className:"swing",
+			timing:"linear"
+		},
+		88:{//x
+			duration:"0.5s",
+			className:"lightSpeedIn",
+			timing:"ease-out"
+		},
+		89:{//y
+			duration:"0.5s",
+			className:"flash",
+			timing:"ease-out"
 		}
 }
 
