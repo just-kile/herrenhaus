@@ -16,9 +16,10 @@ var keyAnimMap = {
 $(function(){
 	var logo = $(".logo");
 	$(document).on("keydown",function(e){
-		e.preventDefault();
+		
 		var animation = keyAnimMap[e.keyCode]
 		if(animation){
+			e.preventDefault();
 			console.log("Animation "+animation.className+" found")
 			logo.css("-webkit-animation","");
 			setTimeout(function(){
