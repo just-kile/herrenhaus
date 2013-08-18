@@ -8,6 +8,31 @@ var keyAnimMap = {
 			duration:"0.5s",
 			className:"blurPulse",
 			timing:"ease-out"
+		},
+		65:{//a
+			duration:"0.5s",
+			className:"flipLeft",
+			timing:"linear"
+		},
+		68:{//d
+			duration:"0.5s",
+			className:"explode",
+			timing:"linear"
+		},
+		87:{//w
+			duration:"0.5s",
+			className:"flipTop",
+			timing:"linear"
+		},
+		83:{//s
+			duration:"0.5s",
+			className:"flipBottom",
+			timing:"linear"
+		},
+		69:{//e
+			duration:"0.5s",
+			className:"saturate",
+			timing:"linear"
 		}
 }
 
