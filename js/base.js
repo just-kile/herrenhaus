@@ -61,7 +61,7 @@ var keyAnimMap = {
 			timing:"ease-out"
 		},
 		49:{//1
-			duration:"1s",
+			duration:"0.5s",
 			className:"rollIn",
 			timing:"ease-out"
 		},		50:{//2
