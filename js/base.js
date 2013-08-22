@@ -53,6 +53,26 @@ var keyAnimMap = {
 			duration:"0.5s",
 			className:"flash",
 			timing:"ease-out"
+		},
+		
+		67:{//c
+			duration:"1s",
+			className:"tada",
+			timing:"ease-out"
+		},
+		49:{//1
+			duration:"1s",
+			className:"rollIn",
+			timing:"ease-out"
+		},		50:{//2
+			duration:"1s",
+			className:"hinge",
+			timing:"ease-out"
+		},
+		51:{//3
+			duration:"1s",
+			className:"rotateInDownRight",
+			timing:"ease-out"
 		}
 }
 
