@@ -13,4 +13,11 @@ Animations:
 * E: Invert
 * F: Swing
 * X: Lightspeed In
-* Y: Flash
+* Y: Flash,
+* C: Tada,
+* 1: rollIn
+* 2: hinge
+* 3: rotateInDownRight
+
+Queues:
+* Enter: Start Random Animations
