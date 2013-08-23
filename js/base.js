@@ -78,27 +78,57 @@ var keyAnimMap = {
 
 
 
+var H = H||{};
+var interval = null;
+H.startRandomAnimation = function(){
+	var keys= Object.keys(keyAnimMap);
+	var keyNum = Math.round((Math.random()*100))%keys.length;
+	var animation = keyAnimMap[keys[keyNum]];
+	H.animate(animation);
+	interval = setTimeout(H.startRandomAnimation,parseFloat(animation.duration)*1000);
+}
+H.stopRandomAnimation = function(){
+	if(interval){
+		clearTimeout(interval);
+		interval = null;
+	}
+}
+H.animate = function(animation){
+	console.log("Animation "+animation.className+" found")
+	H.logo.css("-webkit-animation","");
+	setTimeout(function(){
+		H.logo.css("-webkit-animation",[animation.className,animation.duration,animation.timing].join(" "));
+		console.log("Animation "+animation.className+" executed")
+	},0);
+}
+H.reset = function(){
+	H.logo.css("-webkit-animation","");
+	console.log("Remove webkit animation");
+}
 $(function(){
-	var logo = $(".logo");
+	H.logo = $(".logo");
 	$(document).on("keydown",function(e){
 		
 		var animation = keyAnimMap[e.keyCode]
+		var cAnimation = keyCustomAnimMap[e.keyCode]
 		if(animation){
 			e.preventDefault();
-			console.log("Animation "+animation.className+" found")
-			logo.css("-webkit-animation","");
-			setTimeout(function(){
-				logo.css("-webkit-animation",[animation.className,animation.duration,animation.timing].join(" "));
-				console.log("Animation "+animation.className+" executed")
-			},0);
+			H.animate(animation)
+		}else if(cAnimation){
+			cAnimation.isRunning?cAnimation.stop():cAnimation.start();
+			cAnimation.isRunning = !cAnimation.isRunning;
 		}else{
 			console.log("Didnt found animation!")
 		}
 	});
-	logo.on("webkitAnimationEnd",function(){
-		logo.css("-webkit-animation","");
-		console.log("Remove webkit animation");
-	});
+	H.logo.on("webkitAnimationEnd",H.reset);
 	
 	
 });
+var keyCustomAnimMap = {
+		13:{
+			start:H.startRandomAnimation,
+			stop:H.stopRandomAnimation,
+			isRunning:false
+		}
+}

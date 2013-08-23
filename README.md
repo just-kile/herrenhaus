@@ -17,3 +17,6 @@ Animations:
 * 1: rollIn
 * 2: hinge
 * 3: rotateInDownRight
+
+Queues:
+* Enter: Start Random Animations
