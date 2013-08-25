@@ -60,16 +60,17 @@ var keyAnimMap = {
 			className:"tada",
 			timing:"ease-out"
 		},
-		49:{//1
+		84:{//t
 			duration:"0.5s",
 			className:"rollIn",
 			timing:"ease-out"
-		},		50:{//2
+		},		
+		71:{//g
 			duration:"1s",
 			className:"hinge",
 			timing:"ease-out"
 		},
-		51:{//3
+		86:{//v
 			duration:"1s",
 			className:"rotateInDownRight",
 			timing:"ease-out"
@@ -79,6 +80,7 @@ var keyAnimMap = {
 
 
 var H = H||{};
+H.imagePath = "img/haus_{0}.png";
 var interval = null;
 H.startRandomAnimation = function(){
 	var keys= Object.keys(keyAnimMap);
@@ -115,20 +117,76 @@ $(function(){
 			e.preventDefault();
 			H.animate(animation)
 		}else if(cAnimation){
-			cAnimation.isRunning?cAnimation.stop():cAnimation.start();
+			cAnimation.isRunning?cAnimation.stop(cAnimation):cAnimation.start(cAnimation);
 			cAnimation.isRunning = !cAnimation.isRunning;
 		}else{
 			console.log("Didnt found animation!")
 		}
 	});
 	H.logo.on("webkitAnimationEnd",H.reset);
-	
+	H.preload(keyCustomAnimMap);
 	
 });
+H.images = [];
+H.preload = function(map) {
+	$.each(map,function(key,val){
+		if(val.color){
+			new Image().src = H.imagePath.replace("{0}",val.color);
+		}
+		
+	})
+}
+
+H.changeColor = function(cAnimation){
+	H.logo.find("img").attr("src",H.imagePath.replace("{0}",cAnimation.color));
+	cAnimation.isRunning = true;
+}
 var keyCustomAnimMap = {
 		13:{
 			start:H.startRandomAnimation,
 			stop:H.stopRandomAnimation,
 			isRunning:false
-		}
+		},
+		49:{
+			start:H.changeColor,
+			stop:function(){},
+			isRunning:false,
+			color:"weiss"
+		},
+		50:{
+			start:H.changeColor,
+			stop:function(){},
+			isRunning:false,
+			color:"blue"
+		},		
+		51:{
+			start:H.changeColor,
+			stop:function(){},
+			isRunning:false,
+			color:"green"
+		},
+		52:{
+			start:H.changeColor,
+			stop:function(){},
+			isRunning:false,
+			color:"orange"
+		},
+		53:{
+			start:H.changeColor,
+			stop:function(){},
+			isRunning:false,
+			color:"pink"
+		},
+		54:{
+			start:H.changeColor,
+			stop:function(){},
+			isRunning:false,
+			color:"red"
+		},
+		55:{
+			start:H.changeColor,
+			stop:function(){},
+			isRunning:false,
+			color:"tuerkis"
+		},
 }
