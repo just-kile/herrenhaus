@@ -136,7 +136,7 @@ H.preload = function(map) {
 		
 	})
 }
-
+H.sttstst = function(){};
 H.changeColor = function(cAnimation){
 	H.logo.find("img").attr("src",H.imagePath.replace("{0}",cAnimation.color));
 	cAnimation.isRunning = true;
@@ -171,6 +171,7 @@ var keyCustomAnimMap = {
 			isRunning:false,
 			color:"orange"
 		},
+		
 		53:{
 			start:H.changeColor,
 			stop:function(){},
