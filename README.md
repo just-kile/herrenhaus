@@ -19,6 +19,7 @@ Animations:
 * g: hinge
 * v: rotateInDownRight
 
+
 Colors:
 * 1: white
 * 2: blue
