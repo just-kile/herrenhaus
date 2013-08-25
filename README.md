@@ -15,9 +15,18 @@ Animations:
 * X: Lightspeed In
 * Y: Flash,
 * C: Tada,
-* 1: rollIn
-* 2: hinge
-* 3: rotateInDownRight
+* t: rollIn
+* g: hinge
+* v: rotateInDownRight
+
+Colors:
+* 1: white
+* 2: blue
+* 3: green
+* 4: orange
+* 5: pink
+* 6: red
+* 7: cyan
 
 Queues:
 * Enter: Start Random Animations
